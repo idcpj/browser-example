@@ -3,10 +3,10 @@ import {Entity, PrimaryGeneratedColumn, Column} from "typeorm";
 @Entity()
 export class Category {
 
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn({type:"int"})
     id: number;
 
-    @Column()
+    @Column({type:"varchar"})
     name: string;
 
 }

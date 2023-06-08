@@ -5,13 +5,13 @@ import {Author} from "./Author"
 @Entity()
 export class Post {
 
-    @PrimaryGeneratedColumn()
+    @PrimaryGeneratedColumn({type:"int"})
     id: number;
 
-    @Column()
+    @Column({type:"varchar"})
     title: string;
 
-    @Column("text")
+    @Column({type:"text"})
     text: string;
 
     @ManyToMany(type => Category, {
